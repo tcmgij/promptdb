@@ -123,7 +123,8 @@ class App {
 
   _registerServiceWorker() {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js').catch(err => {
+      // Use relative path so it works on GitHub Pages subdirectories
+      navigator.serviceWorker.register('./service-worker.js').catch(err => {
         console.warn('Service Worker registration failed:', err);
       });
     }
