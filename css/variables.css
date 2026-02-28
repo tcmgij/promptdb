@@ -1,0 +1,68 @@
+/* ============================================================
+   GP Prompt Database — Design Tokens
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --bg-primary:    #FAF8F4;
+  --bg-secondary:  #F2EFE9;
+  --bg-elevated:   #EDEAE3;
+  --text-primary:  #1A1714;
+  --text-secondary:#6B6560;
+  --text-tertiary: #A09A94;
+  --accent:        #2C4A3E;
+  --accent-light:  #EAF0EE;
+  --danger:        #C0392B;
+  --danger-light:  #FDECEA;
+  --border:        #E2DDD7;
+
+  /* Tag palette (desaturated, warm) */
+  --tag-coral:    #D4856A;
+  --tag-amber:    #C9A05A;
+  --tag-sage:     #7A9E7E;
+  --tag-sky:      #7AA3B8;
+  --tag-lavender: #9B8DB8;
+  --tag-rose:     #C47B8E;
+  --tag-teal:     #5B9EA0;
+  --tag-ochre:    #B8924A;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+
+  /* Radius */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(26,23,20,0.06), 0 1px 2px rgba(26,23,20,0.04);
+  --shadow-md: 0 4px 12px rgba(26,23,20,0.08), 0 2px 4px rgba(26,23,20,0.04);
+  --shadow-lg: 0 16px 40px rgba(26,23,20,0.14), 0 4px 12px rgba(26,23,20,0.06);
+
+  /* Transitions */
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Layout */
+  --max-width: 480px;
+  --header-height: 60px;
+  --search-height: 52px;
+  --nav-height: 56px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --spring: linear;
+    --ease-out: linear;
+  }
+}

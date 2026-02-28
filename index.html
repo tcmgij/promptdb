@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!--
+    VIEWPORT: viewport-fit=cover is required for env(safe-area-inset-bottom) to work
+    on iPhone. Do not remove this.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+  <title>GP Prompt Database</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!--
+    APPLE TOUCH ICON: Safari ignores manifest.json for home screen icons entirely.
+    This <link> tag must be hardcoded here.
+
+    TO REPLACE THE PLACEHOLDER ICON:
+    1. Create a square image (at least 512×512px, ideally 1024×1024px)
+    2. Go to https://realfavicongenerator.net or https://favicon.io
+    3. Upload your image and download the generated files
+    4. Replace the files in the /icons/ directory:
+       - icons/icon-180.png  (180×180) ← this is the iPhone home screen icon
+       - icons/icon-192.png  (192×192) ← PWA manifest
+       - icons/icon-512.png  (512×512) ← PWA manifest
+    5. That's it — no code changes needed.
+  -->
+  <link rel="apple-touch-icon" href="/icons/icon-180.png">
+
+  <!-- PWA: iOS standalone mode -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="GP Prompts">
+
+  <!-- Theme color for browser UI -->
+  <meta name="theme-color" content="#FAF8F4">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Preload key fonts (served locally — required for offline-first) -->
+  <link rel="preload" href="/fonts/playfair-display-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-400.woff2"            as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-500.woff2"            as="font" type="font/woff2" crossorigin>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <div id="app">
+    <!-- App shell is rendered by app.js -->
+    <div class="loading-screen" style="
+      display:flex; align-items:center; justify-content:center;
+      height:100dvh; flex-direction:column; gap:16px;
+      font-family: Georgia, serif; color: #6B6560;">
+      <div style="font-size:28px; font-weight:700; color:#1A1714; letter-spacing:-0.5px;">GP</div>
+      <div style="font-size:13px; letter-spacing:1px; text-transform:uppercase; color:#A09A94;">Loading…</div>
+    </div>
+  </div>
+
+  <!-- App entry point (ES module) -->
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
