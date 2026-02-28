@@ -2,7 +2,8 @@
 
 import { saveTag, deleteTag, savePrompt, getAllTags } from '../db.js';
 import { generateUUID } from '../utils/uuid.js';
-import { exportToJSON, readJSONFile, validateImport, importData as importDB } from '../utils/exportImport.js';
+import { exportToJSON, readJSONFile, validateImport } from '../utils/exportImport.js';
+import { importData as importDB } from '../db.js';
 import { showModal } from '../components/modal.js';
 import { icon } from '../utils/icons.js';
 
